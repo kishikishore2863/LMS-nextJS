@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f7fb;
+  --foreground: #161a26;
+  --card: #ffffff;
+  --muted: #667085;
+  --border: #e4e7ef;
+  --primary: #4453d9;
+  --primary-soft: #eef0fd;
+  --success: #12875a;
+  --warning: #b8740a;
+  --danger: #c8372d;
+  --chart-1: #4453d9;
+  --chart-2: #12a37a;
+  --chart-3: #e3a008;
+  --chart-4: #b4bad0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0e1117;
+    --foreground: #e6e8ef;
+    --card: #161a23;
+    --muted: #98a0b3;
+    --border: #262b38;
+    --primary: #7c88ff;
+    --primary-soft: #1f2440;
+    --success: #34c48b;
+    --warning: #e8a838;
+    --danger: #f06a5e;
+    --chart-1: #7c88ff;
+    --chart-2: #34c48b;
+    --chart-3: #e8b838;
+    --chart-4: #4a5168;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-soft: var(--primary-soft);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.prose-lesson p { margin: 0 0 1em; line-height: 1.7; }
